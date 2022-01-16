@@ -15,7 +15,7 @@ RUN apk add --no-cache --virtual .buildDeps \
 WORKDIR /build
 RUN git clone https://github.com/merbanan/rtl_433
 WORKDIR ./rtl_433
-
+RUN git tag -l
 ARG rtl433GitRevision=21.12
 RUN git checkout ${rtl433GitRevision}
 WORKDIR ./build
